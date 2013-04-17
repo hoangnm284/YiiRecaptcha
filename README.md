@@ -20,14 +20,14 @@ How to use this plugin
   
 - In you view file, add the following code insite your form widget:
  
- <?php 
+ 	<?php 
 		echo Yii::app()->recaptcha->recaptcha_get_html();
 		 echo $form->error($model,'Recaptcha');
 	?>
 
 - rewrite validate function on your model like below:
 
- public function validate(){
+	public function validate(){
 		$result = parent::validate();
 		
 		$resp = Yii::app()->recaptcha->recaptcha_check_answer (null,
