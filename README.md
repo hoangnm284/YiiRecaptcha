@@ -30,6 +30,7 @@ How to use this plugin
 ```
 
 - Rewrite validate function on your model like below:
+
 ```php
 	public function validate(){
 		$result = parent::validate();
